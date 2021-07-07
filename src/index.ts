@@ -1,11 +1,15 @@
 import express from 'express';
-// import logger from './'
+import morgan from 'morgan';
+import routes from './routes';
 
 const app = express();
 const port = 3000;
 
+app.use(morgan('combined'));
+app.use('/api', routes);
+
 app.get('/', (req, res) => {
-    res.send('running :)');
+    res.send('main :)');
 });
 
 app.listen(port, () => {
