@@ -4,8 +4,12 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "nodemon src/index.ts"
+        "lint": "eslint './src/index.ts'",
+        "prettier": "prettier --config .prettierrc './src/**/*.ts' --write",
+        "start": "nodemon src/index.ts",
+        "jasmine": "jasmine",
+        "test": "npm run build && npm run jasmine",
+        "build": "npx rimraf build && npx tsc"
     },
     "repository": {
         "type": "git",
@@ -18,10 +22,20 @@
     },
     "homepage": "https://github.com/JulCesWhat/Image_Processing_API#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "jasmine": "^3.8.0",
+        "jasmine-spec-reporter": "^7.0.0"
     },
     "devDependencies": {
         "@types/express": "^4.17.12",
-        "nodemon": "^2.0.9"
+        "@types/jasmine": "^3.7.7",
+        "@types/node": "^15.14.0",
+        "eslint": "^7.29.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "nodemon": "^2.0.9",
+        "prettier": "^1.19.1",
+        "ts-node": "^10.0.0",
+        "typescript": "^4.3.5"
     }
 }
