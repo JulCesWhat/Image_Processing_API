@@ -2,7 +2,7 @@ import express from 'express';
 import numValidator from './numValidator';
 import filenameValidator from './filenameValidator';
 
-const validator = (req: express.Request, res: express.Response, next: Function): void => {
+const validator = (req: express.Request, res: express.Response, next: express.NextFunction): void => {
     const { filename, width, height } = req.query;
     if (filename && width && height) {
         if (!filenameValidator(filename as string)) {

@@ -8,7 +8,7 @@ const port = 3000;
 app.use(morgan('combined'));
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
+app.get('/', (req: express.Request, res: express.Response) => {
     res.send('main :)');
 });
 

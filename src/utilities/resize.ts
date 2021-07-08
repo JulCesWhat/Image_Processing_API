@@ -1,5 +1,6 @@
 import sharp from 'sharp';
-const fs = require('fs');
+// const fs = require('fs');
+import fs from 'fs';
 
 
 const myFunc = (filename: string, width: number, height: number): Promise<string> => {

@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint './src/index.ts'",
+        "lint": "eslint . --ext .ts",
         "prettier": "prettier --config .prettierrc './src/**/*.ts' --write",
         "start": "nodemon src/index.ts",
         "jasmine": "jasmine",
@@ -27,6 +27,7 @@
         "jasmine": "^3.8.0",
         "jasmine-spec-reporter": "^7.0.0",
         "morgan": "^1.10.0",
+        "request": "^2.88.2",
         "sharp": "^0.28.3"
     },
     "devDependencies": {
@@ -34,7 +35,10 @@
         "@types/jasmine": "^3.7.7",
         "@types/morgan": "^1.9.3",
         "@types/node": "^15.14.0",
+        "@types/request": "^2.48.6",
         "@types/sharp": "^0.28.4",
+        "@typescript-eslint/eslint-plugin": "^4.28.2",
+        "@typescript-eslint/parser": "^4.28.2",
         "eslint": "^7.29.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
